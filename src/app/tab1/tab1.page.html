@@ -7,11 +7,79 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card style="display: flex;">
+    <ion-card-header  style="padding: 5px;">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
+    </ion-card-header>
+
+    <ion-card-content style="margin-top:13px; padding-bottom: 5px;">
+      <ion-card-subtitle>Nº001</ion-card-subtitle>
+      <ion-card-title>Bulbassaur</ion-card-title>
+      <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-badge color="grass" slot="end">Grass</ion-badge>
+        <ion-badge color="poison" slot="end" style="margin-left:5px">Poison</ion-badge>
+      </ion-item>
+      <ion-label class="">Height: 1' 04"</ion-label><br>
+      <ion-label class="">Weight: 13.2 lbs</ion-label><br>
+      <ion-label class="">Category: Mouse</ion-label><br>
+      <ion-label class="">Abilities: Static</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card style="display: flex;">
+    <ion-card-header  style="padding: 5px;">
+      <img src="assets/charmander.png">
+    </ion-card-header>
+    <ion-card-content style="margin-top:13px; padding-bottom: 5px;">
+      <ion-card-subtitle>Nº004</ion-card-subtitle>
+      <ion-label>Charmander <h5 slot="end">Nº004</h5></ion-label>
+      <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-badge color="fire" slot="end">Fire</ion-badge>
+      </ion-item>
+      <ion-label class="">Height: 1' 04"</ion-label><br>
+      <ion-label class="">Weight: 13.2 lbs</ion-label><br>
+      <ion-label class="">Category: Mouse</ion-label><br>
+      <ion-label class="">Abilities: Static</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card style="display: flex;">
+    <ion-card-header  style="padding: 5px;">
+      <img src="assets/squirtle.png">
+    </ion-card-header>
+    <ion-card-content style="margin-top:13px; padding-bottom: 5px;">
+      <ion-card-subtitle>Nº007</ion-card-subtitle>
+      <ion-card-title>Squirtle</ion-card-title>
+      <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-badge color="water" slot="end">Water</ion-badge>
+      </ion-item>
+      <ion-label class="">Height: 1' 04"</ion-label><br>
+      <ion-label class="">Weight: 13.2 lbs</ion-label><br>
+      <ion-label class="">Category: Mouse</ion-label><br>
+      <ion-label class="">Abilities: Static</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card style="display: flex;">
+    <ion-card-header  style="padding: 5px;">
+      <img src="assets/pikachu.png">
+    </ion-card-header>
+    <ion-card-content style="margin-top:13px; padding-bottom: 5px;">
+      <ion-card-subtitle>Nº025</ion-card-subtitle>
+      <ion-card-title>Pikachu</ion-card-title>
+      <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-badge color="electric" slot="end">Electric</ion-badge>
+      </ion-item>
+      <ion-label class="">Height: 1' 04"</ion-label><br>
+      <ion-label class="">Weight: 13.2 lbs</ion-label><br>
+      <ion-label class="">Category: Mouse</ion-label><br>
+      <ion-label class="">Abilities: Static</ion-label>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
