@@ -7,10 +7,19 @@ ion-badge {
   margin: 0 2.5px;
 }
 
-ion-card{
+ion-card {
   margin: 15px;
 }
 
-ion-row{
-  background-color:#8d2121;
+ion-row .red{
+  background-color: #8d2121;
+}
+
+img {
+  width: 250px;
+  min-width: 100px;
+}
+
+ion-card-title{
+  text-align: start;
 }
