@@ -1,25 +1,33 @@
 ion-card-content {
-  margin-top: 13px;
-  padding-bottom: 5px;
+  padding: 5px 16px;
+}
+ion-card-header {
+  padding: 10px 5px;
 }
 
 ion-badge {
   margin: 0 2.5px;
 }
 
-ion-card {
-  margin: 15px;
+ion-col {
+  margin: 0;
+  padding: 0;
 }
 
-ion-row .red{
-  background-color: #8d2121;
+ion-row {
+  margin: 0 5px 0 5px;
+  .red {
+    background-color: #8d2121;
+  }
 }
 
-img {
-  width: 250px;
-  min-width: 100px;
-}
-
-ion-card-title{
+ion-card-title {
   text-align: start;
+}
+
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
 }
