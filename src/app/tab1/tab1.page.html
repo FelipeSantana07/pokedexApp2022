@@ -1,50 +1,39 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title> Tab 1 </ion-title>
-  </ion-toolbar>
+<ion-toolbar>
+  <ion-title> Pokedex </ion-title>
+</ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-row class="ion-justify-content-center red">
-    <ion-col size="" *ngFor="let pokemon of listaPokemon">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Nº001</ion-card-subtitle>
-          <img
-            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
-          />
-        </ion-card-header>
-
-        <ion-card-content>
-          <ion-card-title>{{pokemon.name | titlecase}}</ion-card-title>
-          <ion-item>
-            <ion-label>Type</ion-label>
-            <ion-badge color="grass" slot="end">Grass</ion-badge>
-            <ion-badge color="poison" slot="end">Poison</ion-badge>
-          </ion-item>
-
-          <ion-grid>
-            <ion-row class="ion-align-items-center">
-              <ion-col class="ion-align-self-center">Type</ion-col>
-              <ion-col size="">
-                <ion-row class="ion-align-items-end">
-                <ion-item>
-                  <ion-badge color="grass">Grass</ion-badge>
-                </ion-item>
-              </ion-row>
-              <ion-row class="ion-align-items-end">
-                <ion-item>
-                  <ion-badge color="poison">Poison</ion-badge>
-                </ion-item>
-              </ion-row>
-              </ion-col>
-              <ion-col size="">
-                
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
+<ion-content [fullscreen]="true" color="light">
+<ion-row class="ion-justify-content-center">
+  <ion-col size-lg *ngFor="let pokemon of listaPokemon" class="colcard">
+    <ion-card class="card" color="">
+      <ion-card-header>
+        <ion-card-subtitle>Nº001</ion-card-subtitle>
+        <img
+          src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+        />
+        <ion-card-title class="ion-text-center"
+          >{{pokemon.name | titlecase}}</ion-card-title
+        >
+        
+      </ion-card-header>
+      <hr width="185px" size="1" color="" style="margin: 0 auto">
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col  class="ion-align-self-center">
+            <ion-item lines="none" 
+              ><ion-badge class="type" color="grass">Grass</ion-badge>
+            </ion-item>
+          </ion-col>
+          <ion-col  class="ion-align-self-center">
+            <ion-item lines="none">
+              <ion-badge class="type" color="poison">Poison</ion-badge>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-col>
+</ion-row>
 </ion-content>
