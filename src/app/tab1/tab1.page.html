@@ -1,39 +1,39 @@
 <ion-header [translucent]="true">
-<ion-toolbar>
-  <ion-title> Pokedex </ion-title>
-</ion-toolbar>
+  <ion-toolbar>
+    <ion-title> Pokedex </ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="light">
-<ion-row class="ion-justify-content-center">
-  <ion-col size-lg *ngFor="let pokemon of listaPokemon" class="colcard">
-    <ion-card class="card" color="">
-      <ion-card-header>
-        <ion-card-subtitle>Nº001</ion-card-subtitle>
-        <img
-          src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
-        />
-        <ion-card-title class="ion-text-center"
-          >{{pokemon.name | titlecase}}</ion-card-title
-        >
-        
-      </ion-card-header>
-      <hr width="185px" size="1" color="" style="margin: 0 auto">
-      <ion-grid>
-        <ion-row class="ion-justify-content-center">
-          <ion-col  class="ion-align-self-center">
-            <ion-item lines="none" 
-              ><ion-badge class="type" color="grass">Grass</ion-badge>
-            </ion-item>
-          </ion-col>
-          <ion-col  class="ion-align-self-center">
-            <ion-item lines="none">
-              <ion-badge class="type" color="poison">Poison</ion-badge>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card>
-  </ion-col>
-</ion-row>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size-lg *ngFor="let pokemon of listaPokemon" class="colcard">
+      <ion-card class="card">
+        <ion-card-header>
+          <ion-card-subtitle>Nº001</ion-card-subtitle>
+          <img
+            [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+pokemon.id.toString().padStart(3, '0') +'.png'"
+          />
+          <ion-card-title class="ion-text-center"
+            >{{pokemon.name | titlecase}}</ion-card-title
+          >
+        </ion-card-header>
+        <hr width="185px" size="1" color="" style="margin: 0 auto" />
+        <ion-grid>
+          <ion-row class="ion-justify-content-center">
+            <ion-col
+              class="ion-align-self-center"
+              *ngFor="let type of pokemon.types"
+            >
+              <ion-item lines="none" [color]="pokemon.types[0].type.name"
+                ><ion-badge class="type" [color]="type.type.name"
+                  >{{type.type.name}}</ion-badge
+                >
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </ion-content>
+<!-- [color]="pokemon.types[0].type.name" -->
