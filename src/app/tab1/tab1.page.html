@@ -7,7 +7,7 @@
 <ion-content [fullscreen]="true" color="light">
   <ion-row class="ion-justify-content-center">
     <ion-col size-lg *ngFor="let pokemon of listaPokemon" class="colcard">
-      <ion-card class="card">
+      <ion-card class="card" [color]="pokemon.types[0].type.name">
         <ion-card-header>
           <ion-card-subtitle>Nº001</ion-card-subtitle>
           <img
